@@ -1,0 +1,28 @@
+[package]
+name = "endex"
+version.workspace = true  
+edition.workspace = true
+author.workspace = true 
+description.workspace = true
+repository.workspace = true 
+license.workspace = true
+keywords = ["enum", "variant", "index"]
+readme = "./README.md"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
+
+[workspace]
+members = ["impl"]
+
+[workspace.package]
+version = "0.1.0"
+description = "get index of enum variant by enum value"
+edition = "2021"
+author = "Bruce0203 <brucefreedy@gmail.com>"
+repository = "https://github.com/Bruce0203/ename"
+license = "MIT"
+
+[dependencies]
+endex_derive = { path = "./impl", version = "0.1.0" }
